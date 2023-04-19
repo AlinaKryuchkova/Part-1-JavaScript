@@ -8,3 +8,177 @@ answer[2] = prompt('Из какого вы города?', '');
 const category = 'toy';
 console.log('barby' + category);
 */
+
+for(let i = 1; i < 7; i++) {
+    console.log(i);
+}
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let i = 0;
+
+while (i < numbers.length) {
+  if (numbers[i] % 2 === 0) {
+    i++;
+    continue;
+  }
+  console.log(numbers[i]);
+  i++;
+}
+
+const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let i = 0;
+while (i < numbers.length) {
+  if (numbers[i] === 5) {
+    break;
+  }
+  console.log(numbers[i]);
+  i++;
+} 
+
+for (let i = 0; i < 3; i++){
+    console.log(i);
+    for(let j = 0; j < 3; j++){
+        console.log(j);
+    }
+}
+
+let result = '';
+const length = 7;
+
+for(let i = 1; i < length; i++){
+    for(let a = 0; a < i; a++){
+        result +='*';
+    }
+    result += '\n';
+}
+console.log(result);
+
+outerloop:
+for (let i = 0; i < 3; i++) {
+  for (let j = 0; j < 3; j++) {
+    console.log(i, j);
+    if (i === 1 && j === 1) {
+      break outerloop;
+    }
+  }
+}
+
+let a = 5;
+    while(a <= 10) {
+    console.log(a);
+    a++;
+}
+
+for(i = 2; i <= 10; i++){
+  if(i % 2 !== 0){
+      continue;
+  }
+  console.log(i);
+}
+
+for(i = 20; i >= 10; i--){
+  if (i === 13){
+      break;
+  }
+  console.log(i);
+}  
+
+for (let i = 2; i <= 16; i++) {
+  if (i % 2 === 0) {
+      continue;
+  } else {
+      console.log(i);
+  }
+}
+
+/*let j = 2;
+while(j <= 16) {
+  if(j % 2 === 0){
+    continue;
+  } else{
+    console.log(j);
+    j++;
+  }
+}*/
+
+let j = 2;
+while(j <= 16) {
+  if(j % 2 === 0){
+    j++;
+    continue;
+  } else{
+    console.log(j);
+    j++;
+  }
+}
+let j = 2;
+
+while (j <= 16) {
+  if (j % 2 !== 0) {
+    console.log(j);
+  }
+  j++;
+}
+/*
+for (let i = 5; i < 11; i++) {
+  arrayOfNumbers[i - 5] = i;
+}
+
+console.log(arrayOfNumbers);
+return arrayOfNumbers;*/
+
+
+const arr = [3, 5, 8, 16, 20, 23, 50];
+const result = [];
+  for(let i = 3; i <= arr.length; i++){
+    
+    result.push(arr[i]);
+}
+
+const arr = [3, 5, 8, 16, 20, 23, 50];
+const result = [];
+for (let i = 0; i <= arr.length - 1; i++) {
+  result[i] = arr[i];
+}
+console.log(result);
+/*
+const data = [5, 10, 'Shopping', 20, 'Homework'];
+let newArr= [];
+
+    for(i = 0; i <= data.length-1; i){
+        if(typeof data[i] === 'number'){
+            newArr[i] = data[i] * 2;
+        } else  {
+            newArr[i] = data[i] + '- done';
+        }
+        console.log(newArr);
+    }
+*/
+
+const lines = 7;
+let result = '';
+for(let i = 1; i < lines; i++){  
+  for(let a = 0; a < i; a +=2){   
+      result +='*';             
+  }
+result += '\n';  
+}
+
+console.log(result);
+
+
+
+const lines = 5;
+let result = '';
+
+for(let i = 1; i <= lines; i++){  
+  for (let j = 1; j <= lines - i; j++) {
+    result += ' ';
+  }
+  for(let a = 1; a < i*2; a++){   
+    result +='*';             
+  }
+  result += '\n';  
+}
+
+console.log(result);
