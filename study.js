@@ -182,3 +182,97 @@ for(let i = 1; i <= lines; i++){
 }
 
 console.log(result);
+
+function showMessage() {
+  console.log('Hello!');
+}
+showMessage();
+
+function showMessage(text) {
+  console.log(text);
+}
+showMessage('Hello!');
+
+function sumArray(arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+  }
+  return sum;
+}
+const numbers = [1, 2, 3, 4, 5];
+const result = sumArray(numbers);
+console.log(result);
+
+
+const usdCurr = 28;
+const euroCurr = 30;
+function convert(amount, curr) {
+  console.log(curr * amount);
+}
+convert(500, usdCurr);
+convert(500, euroCurr);
+
+const usdCurr = 28;
+const euroCurr = 30;
+const discount = 0.9;
+
+function convert(amount, curr) {
+  return curr * amount;
+}
+
+function promotion(result) {
+  console.log(result * discount);
+}
+
+const res = convert(500, usdCurr);
+promotion(res);
+
+function test() {
+  for (let i = 0; i < 5; i++) {
+    console.log(i);
+    if (i === 3) return
+  }
+  console.log('done');
+}
+
+test();
+
+function sayHello(name) {
+  return 'Привет! ${name} !';
+  }
+sayHello('Антон');
+
+// Создайте функцию, которая будет принимать в себя 2 аргумента, оба числа. Первое число - это база, второе число - это сколько раз нужно будет повторить это число в прогрессии. (Смотри пример ниже). Функция должна возвращать строку (или число в особых случаях, о которых ниже), где эти числа идут по порядку, разделенные тремя дефисами "---". После последнего числа их не должно быть.
+
+// Если второй аргумент не является числом, равен или меньше нуля - то возвращать просто первый аргумент. (Проверяем через оператор typeof)
+
+
+function getMathResult(num, count) {
+  let result = [];
+  if (typeof count !== 'number' || count <= 0){
+      return num
+  }
+
+  for( let i = 1; i <= count; i++){
+    result.push(num * i);
+}
+
+return result.join("---")
+}
+
+console.log(getMathResult(5, 3)); //даст ответ 5---10---15
+
+
+
+const str = 'start';
+console.log(str.length);
+
+const str = 'hello world';
+console.log(str.slice(6));
+
+const test = '123 gbc';
+console.log(parseInt(test)); // 123
+
+const test = '123.45 gbc';
+console.log(parseFloat(test));
